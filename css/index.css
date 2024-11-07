@@ -1,0 +1,53 @@
+.nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    }
+    
+    .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    
+    .nav li {
+    float: left;
+    }
+    
+    .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }   
+    
+    .nav li a:hover {
+    background-color: #111;
+    }
+    
+    .hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+    }   
+    
+    .featured-courses {
+    text-align: center;
+    padding: 20px;
+    }
+    
+    .course-card {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    }
+    
+    footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    }

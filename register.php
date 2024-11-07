@@ -25,7 +25,7 @@ include "connection.php";
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Lessons</a></li>
                 <li><a href="#">Quizzes</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>

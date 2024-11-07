@@ -21,8 +21,8 @@
 
     <main>
         <section class="hero">
-            <h1>Welcome to Our E-Learning Platform</h1>
-            <p>Learn anytime, anywhere.</p>
+            <h1>CyberLearn E-Learning</h1>
+            <p>bro</p>
             <button>Start Learning</button>
         </section>
 

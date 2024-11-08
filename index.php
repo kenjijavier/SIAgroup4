@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Learning App</title>
-    <link rel="stylesheet" href="css/index.css">   
-    <link rel="stylesheet" href="css/register.css">  
+<?php
 
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Lessons</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+include "header.php";
 
-    <main>
+?>
+
         <section class="hero">
             <h1>CyberLearn E-Learning</h1>
             <p>bro</p>
@@ -30,9 +13,9 @@
         <section class="featured-courses">
             <h2>Featured Courses</h2>
             <div class="course-card">
-                <h3>Course 1</h3>
-                <p>Description of Course 1</p>
-                <button>Enroll Now</button>
+                <h3>Scammers</h3>
+                <p>Description po</p>
+                <button>Take quiz</button>
             </div>
             <div class="course-card">
                 <h3>Course 2</h3>
@@ -40,11 +23,9 @@
                 <button>Enroll Now</button>
             </div>
             </section>
-    </main>
 
-    <footer>   
+<?php
 
-        <p>&copy; 2024 CyberLearn, an E-Learning App</p>
-    </footer>
-</body>
-</html>
+include "footer.php";
+
+?>

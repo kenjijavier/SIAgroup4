@@ -1,0 +1,58 @@
+.add-exam, .exam-categories {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.add-exam label, .exam-categories label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-exam input, .exam-categories input {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.exam-categories table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exam-categories th, .exam-categories td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.exam-categories th {
+    background-color: #f2f2f2;
+}
+
+.exam-categories button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-exam button {
+    
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button {
+    font-size: 15px;
+}

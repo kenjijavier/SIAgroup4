@@ -21,12 +21,7 @@
                 <li><a href="#">Lessons</a></li>
                 <li><a href="#">Quizzes</a></li>
                 <li><a href="login.php">Login</a></li>
-                <li>
-                    <a href="#">
-                    <img src="profile_picture.jpg" alt="[img here]" class="profile-pic">
-                    <span class="username">Username</span>
-                    </a>
-                </li>
+                <li><a href="#"><i class="fas fa-tachometer-alt"><img src="images/icons8-profile-picture-30.png" alt="Dashboard"></i>  Username</a></li>
             </ul>
         </nav>
     </header>

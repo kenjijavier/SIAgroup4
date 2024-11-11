@@ -56,3 +56,42 @@
 button {
     font-size: 15px;
 }
+
+
+.edit-link {
+    font-size: small;
+    font-weight: bold;
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .edit-link:hover {
+    color: #265325; /* Darker red on hover */
+    animation: pulse 0.5s infinite alternate;
+  }
+
+.delete-link {
+    font-size: small;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .delete-link:hover {
+    color: #600000; /* Darker red on hover */
+    animation: pulse 0.5s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

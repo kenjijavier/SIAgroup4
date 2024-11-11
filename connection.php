@@ -19,4 +19,12 @@ catch(mysqli_sql_exception $e) {
 if($link) {
     //echo "DATABASE CONNECTED!";
 }
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    $user = "Guest";
+}
+else {
+    $user = $_SESSION['username'];
+}
 ?>

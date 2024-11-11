@@ -1,6 +1,14 @@
 <?php
 
+include "connection.php";
 
+
+if (!isset($_SESSION['username'])) {
+    $user = "Guest";
+}
+else {
+    $user = $_SESSION['username'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +28,22 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Lessons</a></li>
                 <li><a href="#">Quizzes</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="#"><i class="fas fa-tachometer-alt"><img src="images/icons8-profile-picture-30.png" alt="Dashboard"></i>  Username</a></li>
+                <?php
+                    if (!isset($_SESSION['username'])) {
+                        ?> 
+                            <li><a href="login.php">Login</a></li>
+                        <?php
+                    }
+                    else {
+                        ?>
+
+                        <li><a href="#"><i class="fas fa-tachometer-alt"><img src="images/icons8-profile-picture-30.png" alt="Dashboard"></i><?php echo $user; ?></a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                        <?php
+                    }
+                ?>
+                
+                
             </ul>
         </nav>
     </header>

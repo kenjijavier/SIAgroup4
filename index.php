@@ -6,7 +6,7 @@ include "header.php";
 
         <section class="hero">
             <h1>CyberLearn E-Learning</h1>
-            <p>bro</p>
+            <p>Ohayou Gozaimasu <?php echo $user; ?>!</p>
             <button>Start Learning</button>
         </section>
 

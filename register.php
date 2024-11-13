@@ -48,10 +48,10 @@ include "connection.php";
                 <input type="email" name="email" required>
 
                 <label>Password:</label> 
-                <input type="password" name="password" required>
+                <input type="password" name="password" placeholder="minimum of 8 characters" required>
 
                 <label>Confirm Password:</label>
-                <input type="password" name="confirm_password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
 
                 <button type="submit" name="submit1">Register</button>
                 <div class="alert alert-success" id="success" style="margin-top: 15px; display: none">

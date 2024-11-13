@@ -6,7 +6,7 @@ include "header.php";
         
         <link rel="stylesheet" href="css/lessons.css">
         <div class="main-content">
-            <h1>Add/Edit Lessons</h1>
+            <h1>Lessons</h1>
             <div class="box">
                 <div class="add-exam">
                     <h2>Add Lesson</h2>
@@ -24,7 +24,7 @@ include "header.php";
                 </div>
 
                 <div class="exam-categories">
-                    <h2>Lessons</h2>
+                    <h2>Cybersecurity Topics</h2>
                     <table>
                         <thead>
                             <tr>

@@ -95,3 +95,9 @@ button {
       opacity: 1;
     }
   }
+
+  .quiz-topic-header {
+    color: rgb(52, 80, 122);
+    font-weight: bold;
+  }
+  

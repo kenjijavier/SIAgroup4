@@ -24,7 +24,7 @@ include "../connection.php";
             <ul>
                 <li><a href="#"><i class="fas fa-tachometer-alt"><img src="../images/icons8-dashboard-30.png" alt="Dashboard"></i> Dashboard</a></li>
                 <li><a href="lessons.php"><i class="fas fa-cog"><img src="../images/icons8-book-30.png" alt="Settings"></i>Lessons</a></li>
-                <li><a href="quiz.php"><i class="fas fa-cog"><img src="../images/icons8-book-30.png" alt="Settings"></i>Quiz</a></li>
+                <li><a href="quiz.php"><i class="fas fa-cog"><img src="../images/icons8-quiz-30.png" alt="Settings"></i>Quiz</a></li>
                 <li><a href="index.php"><i class="fas fa-sign-out-alt"><img src="../images/icons8-logout-30.png" alt="Logout"></i> Logout</a></li>
             </ul>
         </div> 

@@ -30,7 +30,7 @@
 }
 
 .exam-categories th {
-    background-color: #f2f2f2;
+    background-color: #dfdfdf;
 }
 
 .exam-categories button {
@@ -59,15 +59,15 @@ button {
 
 
 .edit-link {
-    font-size: small;
+    font-size: medium;
     font-weight: bold;
-    color: rgb(0, 255, 0);
+    color: rgb(119, 119, 119);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
   }
   
   .edit-link:hover {
-    color: #265325; /* Darker red on hover */
+    color: #3eb13c; /* Darker red on hover */
     animation: pulse 0.5s infinite alternate;
   }
 

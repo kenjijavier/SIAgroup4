@@ -51,8 +51,9 @@ include "header.php";
                                     <th><?php echo $number; ?></th>
                                     <td><?php echo $row["topic"]; ?></td>
                                     <td><?php echo $row["time_minutes"]; ?></td>
-                                    <td><a href="edit.php?id=<?php echo $row["id"]; ?>" class="edit-link">EDIT</a></td>
-                                    <td><a href="delete.php?id=<?php echo $row["id"]; ?>" class="delete-link">DELETE</a></td>
+                                    <td><a href="edit.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
+                                    <td><a href="delete.php?id=<?php echo $row["id"]; ?>" class="delete-link"><img src="../images//icons8-delete-30.png" alt="Dashboard"></a></td>
+                    
                                 </tr>
 
                                 <?php

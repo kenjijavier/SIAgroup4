@@ -54,8 +54,7 @@ if (isset($_POST["submit1"])) {
 
       if(password_verify($password, $hash_password)) {
 
-        $_SESSION['logged_in'] = true;
-        $_SESSION['usenrame'] = $username;
+       
 
         header("Location: lessons.php");
         exit;

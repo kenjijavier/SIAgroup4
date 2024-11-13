@@ -2,11 +2,10 @@
 
 include "header.php";
 
-?> 
-        
-        <link rel="stylesheet" href="css/lessons.css">
+?>
+<link rel="stylesheet" href="css/lessons.css">
         <div class="main-content">
-            <h1>Add/Edit Lessons</h1>
+            <h1>Add/Edit Quiz</h1>
             <div class="box">
                 <div class="add-exam">
                     <h2>Add Lesson</h2>
@@ -70,31 +69,3 @@ include "header.php";
     </div>
 </body>
 </html>
-
-<?php
-
-if(isset($_POST["submit1"])) {
-
-    $topic = filter_input(INPUT_POST, "topic", FILTER_SANITIZE_SPECIAL_CHARS);
-    $time = filter_input(INPUT_POST,"minutes", FILTER_SANITIZE_SPECIAL_CHARS);
-    
-    $sql = "INSERT INTO quiz_topic (topic, time_minutes) VALUES ('$topic', '$time')";
-
-    try {
-        mysqli_query($link,$sql);
-
-        ?>
-        <script>
-            window.location.href = window.location.href;
-        </script>
-        
-        <?php
-        
-    }
-    catch(mysqli_sql_exception $e) {
-        echo "Error has occured: " . $e->getMessage();
-    }
-}
-
-
-?>

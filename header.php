@@ -3,12 +3,7 @@
 include "connection.php";
 
 
-if (!isset($_SESSION['username'])) {
-    $user = "Guest";
-}
-else {
-    $user = $_SESSION['username'];
-}
+
 ?>
 
 <!DOCTYPE html>

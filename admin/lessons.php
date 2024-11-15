@@ -48,14 +48,19 @@ include "header.php";
                                 ?>
 
                                 <tr>
-                                    <th><?php echo $number; ?></th>
+                                    <td><?php echo $number; ?></td>
                                     <td><?php echo $row["topic"]; ?></td>
                                     <td><?php echo $row["time_minutes"]; ?></td>
                                     <td><a href="edit.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
-                                    <td><a href="delete.php?id=<?php echo $row["id"]; ?>" class="delete-link"><img src="../images//icons8-delete-30.png" alt="Dashboard"></a></td>
-                    
+                                    <td>
+                                        <a href="#" class="delete-link" data-id="<?php echo $row['id']; ?>">
+                                            <img src="../images/icons8-delete-30.png" alt="Delete">
+                                        </a>
+                                    </td>
+                                    
+                                   
                                 </tr>
-
+                                
                                 <?php
                             }
 
@@ -81,21 +86,44 @@ if(isset($_POST["submit1"])) {
     
     $sql = "INSERT INTO quiz_topic (topic, time_minutes) VALUES ('$topic', '$time')";
 
-    try {
+    if(!empty($topic) && !empty($topic)) {
+        $sql = "INSERT INTO quiz_topic (topic, time_minutes) VALUES ('$topic', '$time')";
+
+        try {
         mysqli_query($link,$sql);
 
         ?>
         <script>
             window.location.href = window.location.href;
         </script>
-        
+
         <?php
-        
-    }
-    catch(mysqli_sql_exception $e) {
+
+        }
+        catch(mysqli_sql_exception $e) {
         echo "Error has occured: " . $e->getMessage();
+        }
     }
+  
 }
 
 
 ?>
+
+<script>
+  const deleteLinks = document.querySelectorAll('.delete-link');
+
+  deleteLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const id = link.dataset.id;
+
+      if (confirm('Are you sure you want to delete this topic')) {
+        
+        window.location.href = `delete.php?id=${id}`;
+      }
+    });
+  });
+</script>
+
+

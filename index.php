@@ -5,7 +5,8 @@ include "header.php";
 ?>
 
         <section class="hero">
-            <h1>CyberLearn E-Learning</h1>
+        <img src="../images/icons8-bear-96.png" alt="Profile Picture">
+            <h1>CybearLearn E-Learning</h1>
             <p>Hello <?php echo $user; ?>!</p>
             <button>Start Learning</button>
         </section>

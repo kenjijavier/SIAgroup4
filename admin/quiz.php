@@ -34,7 +34,7 @@ include "header.php";
                                 ?>
 
                                 <tr>
-                                    <th><?php echo $number; ?></th>
+                                    <td><?php echo $number; ?></td>
                                     <td><?php echo $row["topic"]; ?></td>
                                     <td><?php echo $row["time_minutes"]; ?></td>
                                     <td><a href="add_edit_quiz.php?id=<?php echo $row["id"]; ?>" class="edit-link">SELECT</a></td>

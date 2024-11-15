@@ -37,13 +37,17 @@ include "header.php";
 <?php
 
 if(isset($_POST["submit1"])) {
-    $topic1 = filter_input(INPUT_POST, "topic1", FILTER_SANITIZE_SPECIAL_CHARS);
+    $old_topic = $topic;
+    $new_topic = filter_input(INPUT_POST, "topic1", FILTER_SANITIZE_SPECIAL_CHARS);
+
     $min1 = filter_input(INPUT_POST, "min1", FILTER_SANITIZE_SPECIAL_CHARS);
 
-    $sql = "UPDATE quiz_topic SET topic = '$topic1', time_minutes = '$min1' WHERE id='$id'";
-
+    
+    $sql = "UPDATE quiz_topic SET topic = '$new_topic', time_minutes = '$min1' WHERE id='$id'";
+    $sql1 = "UPDATE quiz set topic = '$new_topic' WHERE topic='$old_topic'";
     try {
         mysqli_query($link, $sql);
+        mysqli_query($link, $sql1);
 
         header("Location: lessons.php");
     }

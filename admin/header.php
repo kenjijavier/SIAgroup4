@@ -10,6 +10,7 @@ include "../connection.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
@@ -17,8 +18,9 @@ include "../connection.php";
         <div class="sidebar">
             <div class="user">   
 
-                <img src="../images/admin_profile.png" alt="Profile Picture">
-                <h3>Admin Panel</h3>
+                <img src="../images/icons8-bear-96.png" alt="Profile Picture">
+                <h2>CybearLearn</h2>
+                <h4>Admin Panel</h4>
                 <hr>
             </div>
             <ul>

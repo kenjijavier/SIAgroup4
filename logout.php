@@ -2,7 +2,6 @@
 
 include "connection.php";
 session_destroy();
-
 ?>
 
 <script>

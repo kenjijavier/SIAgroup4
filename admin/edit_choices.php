@@ -19,31 +19,31 @@ while($row=mysqli_fetch_array($response)) {
 <link rel="stylesheet" href="css/lessons.css">
 
         <div class="main-content">
-            <h1>Quiz / <span class="quiz-topic-header"><?php echo $topic; ?></span> / Edit / Question # <?php echo $question_no; ?></h1>
-            <div class="box">
-                <div class="add-exam">
-                    <h2>Edit Question</h2>
-                    <form action="" name="form1" method="post">
-                    <label for="exam-category">Question:</label>
-                    <input type="text" name="question" value="<?php echo $q; ?>">
-                    <hr>
-                    <label >Choice #1:</label>
-                    <input type="text" name="c1" value="<?php echo $c1; ?>">
-                    <label >Choice #2:</label>
-                    <input type="text" name="c2" value="<?php echo $c2; ?>">
-                    <label >Choice #3:</label>
-                    <input type="text" name="c3" value="<?php echo $c3; ?>">
-                    <label >Choice #4:</label>
-                    <input type="text" name="c4" value="<?php echo $c4; ?>">
-                    <label >Answer:</label>
-                    <input type="text" name="ans" value="<?php echo $an; ?>">
+        <h1>Quiz / <span class="quiz-topic-header"><?php echo $topic; ?></span> / Edit / Question # <?php echo $question_no; ?></h1>
+        <div class="box">
+            <div class="add-exam">
+                <h2>Edit Question</h2>
+                <form action="" name="form1" method="post">
+                <label for="exam-category">Question:</label>
+                <input type="text" name="question" value="<?php echo $q; ?>">
+                <hr>
+                <label >Choice #1:</label>
+                <input type="text" name="c1" value="<?php echo $c1; ?>">
+                <label >Choice #2:</label>
+                <input type="text" name="c2" value="<?php echo $c2; ?>">
+                <label >Choice #3:</label>
+                <input type="text" name="c3" value="<?php echo $c3; ?>">
+                <label >Choice #4:</label>
+                <input type="text" name="c4" value="<?php echo $c4; ?>">
+                <label >Answer:</label>
+                <input type="text" name="ans" value="<?php echo $an; ?>">
 
-                    <br><button type="submit" name="submit1">Save Changes</button>
+                <br><button type="submit" name="submit1">Save Changes</button>
 
-                    
-                    </form>
-                </div>
+                
+                </form>
             </div>
+        </div>
         </div>
 
 <?php

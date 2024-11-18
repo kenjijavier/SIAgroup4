@@ -26,16 +26,14 @@
 }
 
 .hero form button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #3e3da0;
+    background-color: #0073e6;
     color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .hero form button:hover {
-    background-color: #946cb4;
+    background-color: #005bb5;
 }

@@ -170,9 +170,24 @@ while ($row=mysqli_fetch_array($response)) {
 
                                             ?>
                                         </td>
-                                        <td><a href="edit_choices.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
                                         <td>
-                                            <a href="#" class="delete-link" data-id="<?php echo $row['id']; ?>">
+                                            <?php
+                                                if(strpos($row["answer"], 'choice_images/')!==false) {
+                                                    ?>
+                                                        <a href="edit_choices_images.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a>
+                                                    <?php
+                                                }
+                                                else {
+                                                    ?>
+                                                    <a href="edit_choices.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a>
+                                                    <?php
+                                                }
+
+                                            ?>
+                                            
+                                        </td>
+                                        <td>
+                                            <a href="" class="delete-link" data-id="<?php echo $row['id']; ?>">
                                                 <img src="../images/icons8-delete-30.png" alt="Delete">
                                             </a>
                                         </td>
@@ -251,8 +266,6 @@ catch (mysqli_sql_exception $e) {
 
 }
 ?>
-
-
 
 <?php
 
@@ -341,9 +354,9 @@ catch (mysqli_sql_exception $e) {
       event.preventDefault();
       const id = link.dataset.id;
 
-      if (confirm('Are you sure you want to delete this topic')) {
+      if (confirm('Are you sure you want to delete this question?')) {
         
-        window.location.href = `delete.php?id=${id}`;
+        window.location.href = `delete_choices.php?id=${id}`;
       }
     });
   });

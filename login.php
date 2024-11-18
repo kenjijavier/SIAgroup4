@@ -1,7 +1,11 @@
 <?php
-
 include "connection.php";
-
+if (!isset($_SESSION['username'])) {
+  $user = "Guest";
+}
+else {
+  $user = $_SESSION['username'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,14 +64,15 @@ include "connection.php";
       </form>
     </section>
   </main>
-
   <footer>   
 
-  <p>&copy; 2024 CyberLearn, an E-Learning App | ACS IT Solution</p>
+<p>&copy; 2024 CyberLearn, an E-Learning App | ACS IT Solution</p>
 </footer>
+
 
 </body>
 </html>
+
 
 <?php
 
@@ -112,7 +117,7 @@ if (isset($_POST["submit1"])) {
             </script>
         <?php
     }
-    echo "SUCESS CONNECION!!!!";
+    
 
 
 }

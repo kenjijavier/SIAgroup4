@@ -26,7 +26,7 @@ include "header.php";
                 <h3><?php echo $row["topic"]; ?></h3>
                 <p>Duration: <?php echo $row["time_minutes"]; ?> minutes</p>
                 <button>Read</button>
-                <button>Take quiz</button>
+                <a><button value="<?php $row["topic"]; ?>" onclick="set_quiz_session(this.value);">Take quiz</button></a>
                 </div>
 
             <?php
@@ -40,3 +40,16 @@ include "header.php";
 include "footer.php";
 
 ?>
+
+<script type="text/javascript">
+    function set_quiz_session(quiz_topic) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function() {
+            if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                window.location="user_quiz.php";
+            }
+        };
+        xmlhttp.open("GET", "forajax/set_quiz_session.php?quiz_topic="+ quiz_topic, true);
+        xmlhttp.send(null);
+    }
+</script>

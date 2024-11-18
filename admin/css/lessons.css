@@ -34,30 +34,6 @@
     background-color: #dfdfdf;
 }
 
-.exam-categories button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-exam button {
-    
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-
-}
-
-button {
-    font-size: 15px;
-}
-
 
 .edit-link {
     font-size: medium;
@@ -101,4 +77,19 @@ button {
     color: rgb(52, 80, 122);
     font-weight: bold;
   }
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3e3da0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #946cb4;
+}
   

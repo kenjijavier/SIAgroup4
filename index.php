@@ -26,7 +26,7 @@ include "header.php";
                 <h3><?php echo $row["topic"]; ?></h3>
                 <p>Duration: <?php echo $row["time_minutes"]; ?> minutes</p>
                 <button>Read</button>
-                <a><button value="<?php $row["topic"]; ?>" onclick="set_quiz_session(this.value);">Take quiz</button></a>
+                <a href="user_quiz.php?quiz_topic=<?php echo $row["topic"]; ?>"><button>Take quiz</button></a>
                 </div>
 
             <?php

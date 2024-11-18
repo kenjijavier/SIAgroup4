@@ -1,5 +1,13 @@
 <?php
 include "header.php";
+$quiz_topic = $_GET["quiz_topic"];
+
+
+$sql = "SELECT * FROM quiz_topic WHERE topic='$quiz_topic'";
+$response = mysqli_query($link, $sql);
+while($row = mysqli_fetch_array($response)) {
+    $quiz_time = $row["time_minutes"];
+}
 
 
 ?>
@@ -10,11 +18,11 @@ include "header.php";
 
 <section class="featured-courses">
     
-    <h2>Topic: </h2>
+    <h2>Topic: <?php echo $quiz_topic; ?></h2>
     
         <div class="course-card" id="questions">
         <div class="timer" >
-            <p >Time left:<span id="countdowntimer" style="display: block;"></span></p>
+            Time left: <span id="timer-value"></span>
             </div>
             <h3>Question 1. Who is the President of the United States of America?</h3>
             
@@ -55,22 +63,27 @@ include "header.php";
 include "footer.php";
 ?>
 
-<script type="text/javascript">
-    setInterval(function() {
-        timer();
-    }, 1000);
-    function timer() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange=function() {
-            if(xmlhttp.readyState==4 && xmlhttp.status==200) {
-                if(xmlhttp.responseText=="00:00:01") {
-                    window.location="result.php";
-                }
+<?php
+$seconds_converted = $quiz_time * 60;
 
-                document.getElementById("countdowntimer").innerHTML=xmlhttp.responseText;
-            }
-        };
-        xmlhttp.open("GET", "forajax/load_timer.php", true);
-        xmlhttp.send(null);
+?>
+
+<script>
+    let countdown = <?php echo $seconds_converted; ?>;
+
+    function updateTimer() {
+        const timerDisplay = document.getElementById('timer-value');
+        const minutes = Math.floor(countdown / 60);
+        const seconds = countdown % 60;
+        timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        if (countdown <= 0) {
+            clearInterval(timerInterval);
+            alert("Time's up!");
+            window.location.href= 'index.php';
+        } else {
+            countdown--;
+        }
     }
+    const timerInterval = setInterval(updateTimer, 1000); 
 </script>

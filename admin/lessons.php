@@ -15,7 +15,7 @@ include "header.php";
                     <input type="text" name="topic">
 
                     <label for="exam-time">Quiz time in Minutes:</label>
-                    <input type="text" name="minutes">
+                    <input type="number" name="minutes" min="1" max="99">
 
                     <br><button type="submit" name="submit1">Add Lesson</button>
 

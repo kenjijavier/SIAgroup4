@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "header.php";
 
 ?>
@@ -26,11 +26,7 @@ include "header.php";
                 <h3><?php echo $row["topic"]; ?></h3>
                 <p>Duration: <?php echo $row["time_minutes"]; ?> minutes</p>
                 <button>Read</button>
-<<<<<<< HEAD
-                <a href="user_quiz.php?quiz_topic=<?php echo $row["topic"]; ?>"><button>Take quiz</button></a>
-=======
-                <button>Take quiz</button>
->>>>>>> parent of 228cbcd (Editing Quiz with Images, and Delete Quiz)
+                
                 </div>
 
             <?php

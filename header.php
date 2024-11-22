@@ -23,7 +23,7 @@ include "connection.php";
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Lessons</a></li>
-                <li><a href="#">Quizzes</a></li>
+                <li><a href="select_quiz.php">Quizzes</a></li>
                 <?php
                     if (!isset($_SESSION['username'])) {
                         ?> 
@@ -35,6 +35,7 @@ include "connection.php";
 
                         <li><a href="#"><i class="fas fa-tachometer-alt"><img src="images/icons8-profile-picture-30.png" alt="Dashboard"></i><?php echo $user; ?></a></li>
                         <li><a href="logout.php">Logout</a></li>
+                        
                         <?php
                     }
                 ?>
@@ -43,3 +44,5 @@ include "connection.php";
             </ul>
         </nav>
     </header>
+
+    

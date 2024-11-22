@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "connection.php";
 
 ?>
@@ -85,16 +85,17 @@ if (isset($_POST["submit1"])) {
         $hash_password = $row["password"];
 
         if(password_verify($password, $hash_password)){
-            ?>
-                <script type="text/javascript">
-                    document.getElementById("success").style.display="block";
-                </script>
-            <?php
-
             $_SESSION['loggedIn'] = true;
             $_SESSION['username'] = $username;
             
-            header("Location: index.php");
+            ?>
+            <script text="text/javascript">
+              document.getElementById("success").style.display="block";
+              setTimeout(function() {
+              window.location = "index.php";
+              }, 2500);
+            </script>
+            <?php
             exit;
         }
         else {

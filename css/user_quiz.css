@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.question-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.question-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.choices {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.choices label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.choices input[type="radio"] {
+    margin-right: 10px;
+}
+
+.choices span {
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#questions {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    display: inline-block;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.timer {
+    text-align:right;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.questions_counter {
+    text-align:left;
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+
+.choices {
+    
+    color: #000000;
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+.choices label:hover {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Transition all properties smoothly */
+    background-color: #3f3da0;
+  }
+.choices label:not(:hover) {
+    transition: all 0.3s ease-out; /* Slower ease-out for a smoother return */
+}

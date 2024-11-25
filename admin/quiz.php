@@ -1,13 +1,19 @@
 <?php
-
+session_start();
 include "header.php";
-
+if(!isset($_SESSION["admin_username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "index.php";
+    </script>
+    <?php
+}
 
 
 ?>
 <link rel="stylesheet" href="css/lessons.css">
         <div class="main-content">
-            <h1>Quiz</h1>
+            <h1>Add Quiz to Lesson</h1>
             <div class="box">
                 
                 <div class="exam-categories">

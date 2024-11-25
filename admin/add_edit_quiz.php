@@ -1,5 +1,12 @@
 <?php
-
+session_start();
+if(!isset($_SESSION["admin_username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "index.php";
+    </script>
+    <?php
+}
 include "header.php";
 $quiz_topic = "";
 $id = $_GET["id"];
@@ -185,7 +192,7 @@ while ($row=mysqli_fetch_array($response)) {
                                                 
                                                 ?>
                                         <td>
-                                            <a href="delete_question.php?id=<?php echo $row["id"]; ?>&topic=<?php echo $quiz_topic?>" class="delete-link">
+                                            <a class="delete-question-link" data-id="<?php echo $row["id"]; ?>" data-topic="<?php echo $quiz_topic?>">
                                                 <img src="../images/icons8-delete-30.png" alt="Delete">
                                             </a>
                                         </td>
@@ -345,6 +352,22 @@ catch (mysqli_sql_exception $e) {
 
 }
 ?>
+
+<script>
+  const deleteLinks = document.querySelectorAll('.delete-question-link');
+
+  deleteLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      if (confirm('Are you sure you want to delete this question?')) {
+        const id = link.dataset.id;
+        const topic = link.dataset.topic; // Assuming you have a data attribute for topic
+        window.location.href = `delete_question.php?id=${id}&topic=${topic}`;
+        }
+    });
+  });
+</script>
 
 
 

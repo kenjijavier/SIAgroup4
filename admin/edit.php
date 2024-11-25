@@ -1,6 +1,13 @@
 <?php
+session_start();
 include "header.php";
-
+if(!isset($_SESSION["admin_username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "index.php";
+    </script>
+    <?php
+}
 ?>
 <link rel="stylesheet" href="css/lessons.css">
 

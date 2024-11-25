@@ -72,15 +72,16 @@ button {
     animation: pulse 0.5s infinite alternate;
   }
 
-.delete-link {
+.delete-link, .delete-question-link {
     font-size: small;
     font-weight: bold;
     color: red;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
   }
+
   
-  .delete-link:hover {
+  .delete-link:hover, .delete-question-link:hover {
     color: #600000; /* Darker red on hover */
     animation: pulse 0.5s infinite alternate;
   }

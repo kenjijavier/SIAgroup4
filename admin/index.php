@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "../connection.php";
 
 ?>
@@ -55,7 +55,7 @@ if (isset($_POST["submit1"])) {
       if(password_verify($password, $hash_password)) {
 
        
-
+        $_SESSION["admin_username"] = $username;
         header("Location: lessons.php");
         exit;
       }

@@ -1,7 +1,13 @@
 <?php
-
+session_start();
 include "header.php";
-
+if(!isset($_SESSION["admin_username"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "index.php";
+    </script>
+    <?php
+}
 ?> 
         
         <link rel="stylesheet" href="css/lessons.css">
@@ -118,7 +124,7 @@ if(isset($_POST["submit1"])) {
       event.preventDefault();
       const id = link.dataset.id;
 
-      if (confirm('Are you sure you want to delete this topic')) {
+      if (confirm('Are you sure you want to delete this topic?')) {
         
         window.location.href = `delete.php?id=${id}`;
       }

@@ -171,7 +171,19 @@ while ($row=mysqli_fetch_array($response)) {
 
                                             ?>
                                         </td>
-                                        <td><a href="edit_choices.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
+                                        <td><?php if(strpos($row["answer"], 'choice_images/')!==false) {
+
+                                                ?>
+                                                <a href="edit_choices_images.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
+                                                <?php
+                                        }
+                                            else {
+                                                ?>
+                                                <a href="edit_choices.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
+                                                <?php
+                                            }
+                                                
+                                                ?>
                                         <td>
                                             <a href="delete_question.php?id=<?php echo $row["id"]; ?>&topic=<?php echo $quiz_topic?>" class="delete-link">
                                                 <img src="../images/icons8-delete-30.png" alt="Delete">

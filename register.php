@@ -10,8 +10,7 @@ include "connection.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
-    <title>CyberLearn   
- - Register</title>
+    <title>CyberLearn - Register</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -65,6 +64,22 @@ include "connection.php";
                 <div class="alert alert-danger" id="mismatch" style="margin-top: 15px; display: none">
                     <strong>Account creation failed!</strong> password does not match.
                 </div>
+
+                <div class="alert alert-danger" id="validatelength" style="margin-top: 15px; display: none">
+                    <strong>Account creation failed!</strong> Password must be at least 8 characters long.
+                </div>
+                <div class="alert alert-danger" id="validateupper" style="margin-top: 15px; display: none">
+                    <strong>Account creation failed!</strong> Password must contain at least one uppercase letter.
+                </div>
+                <div class="alert alert-danger" id="validatelower" style="margin-top: 15px; display: none">
+                    <strong>Account creation failed!</strong> Password must contain at least one lowercase letter.
+                </div>
+                <div class="alert alert-danger" id="validatenumber" style="margin-top: 15px; display: none">
+                    <strong>Account creation failed!</strong> Password must contain at least one number.
+                </div>
+                <div class="alert alert-danger" id="validatespecial" style="margin-top: 15px; display: none">
+                    <strong>Account creation failed!</strong> Password must contain at least one special character.
+                </div>
             </form>
             
         </section>
@@ -113,26 +128,85 @@ if(isset($_POST["submit1"])) {
             <?php
         }
         else {
-           //INSERTION OF USER INPUT
-        $hash_password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO registration (first_name, last_name, email, username, password)
-                VALUES ('$firstname', '$lastname', '$email', '$username', '$hash_password')";
-        try {
-            mysqli_query($link, $sql);
+            
+            //VALIDATE PASSWORD HERE
+            if (validatePassword($password)==true) {
 
-            ?>
-                <script type="text/javascript">
-                    document.getElementById("success").style.display="block";
-                </script>
-
-            <?php
-        } 
-        catch (mysqli_sql_exception $e) {
-            echo "Error has occured: " . $e->getMessage();
-        }
+                //INSERTION OF USER INPUT
+                $hash_password = password_hash($password, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO registration (first_name, last_name, email, username, password)
+                        VALUES ('$firstname', '$lastname', '$email', '$username', '$hash_password')";
+                try {
+                    mysqli_query($link, $sql);
+        
+                    ?>
+                        <script type="text/javascript">
+                            document.getElementById("success").style.display="block";
+                        </script>
+        
+                    <?php
+                } 
+                catch (mysqli_sql_exception $e) {
+                    echo "Error has occured: " . $e->getMessage();
+                }
+                
+            }
         }
         
     }
 
 }
+?>
+
+<?php
+function validatePassword($password) {
+ 
+    if(strlen($password) < 8) {
+        
+        ?>
+        <script>
+            document.getElementById("validatelength").style.display="block";
+        </script>
+        <?php
+        return false;
+    }
+    if(!preg_match(('/[A-Z]/'), $password)) {
+        ?>
+        <script>
+            document.getElementById("validateupper").style.display="block";
+        </script>
+        <?php
+        return false;
+
+    }
+    if(!preg_match(('/[a-z]/'), $password)) {
+        ?>
+        <script>
+            document.getElementById("validatelower").style.display="block";
+        </script>
+        <?php
+        return false;
+    }
+    if(!preg_match(('/[0-9]/'), $password)) {
+        ?>
+        <script>
+            document.getElementById("validatenumber").style.display="block";
+        </script>
+        <?php
+        return false;
+    }
+    if(!preg_match(('/[^A-Za-z0-9]/'), $password)) {
+        ?>
+        <script>
+            document.getElementById("validatespecial").style.display="block";
+        </script>
+        <?php
+        return false;
+    }
+    
+
+    return true;
+}
+
+
 ?>

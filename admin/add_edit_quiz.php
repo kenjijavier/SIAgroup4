@@ -7,6 +7,7 @@ $sql = "SELECT * FROM quiz_topic WHERE id='$id'";
 $response = mysqli_query($link, $sql);
 while ($row=mysqli_fetch_array($response)) {
     $quiz_topic=$row["topic"];
+    $quiz_topic_id = $row["id"];
 }
 ?>
 <link rel="stylesheet" href="css/lessons.css">
@@ -172,7 +173,7 @@ while ($row=mysqli_fetch_array($response)) {
                                         </td>
                                         <td><a href="edit_choices.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
                                         <td>
-                                            <a href="#" class="delete-link" data-id="<?php echo $row['id']; ?>">
+                                            <a href="delete_question.php?id=<?php echo $row["id"]; ?>&topic=<?php echo $quiz_topic?>" class="delete-link">
                                                 <img src="../images/icons8-delete-30.png" alt="Delete">
                                             </a>
                                         </td>
@@ -333,18 +334,5 @@ catch (mysqli_sql_exception $e) {
 }
 ?>
 
-<script>
-  const deleteLinks = document.querySelectorAll('.delete-link');
 
-  deleteLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const id = link.dataset.id;
 
-      if (confirm('Are you sure you want to delete this topic')) {
-        
-        window.location.href = `delete.php?id=${id}`;
-      }
-    });
-  });
-</script>

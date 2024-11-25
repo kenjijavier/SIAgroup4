@@ -53,7 +53,7 @@ include "header.php";
                                     <td><?php echo $row["time_minutes"]; ?></td>
                                     <td><a href="edit.php?id=<?php echo $row["id"]; ?>" class="edit-link"><img src="../images//icons8-edit-text-file-30.png" alt="Dashboard"></a></td>
                                     <td>
-                                        <a href="#" class="delete-link" data-id="<?php echo $row['id']; ?>">
+                                        <a href="delete.php?id=<?php echo $row["id"]; ?>" class="delete-link" data-id="<?php echo $row['id']; ?>">
                                             <img src="../images/icons8-delete-30.png" alt="Delete">
                                         </a>
                                     </td>

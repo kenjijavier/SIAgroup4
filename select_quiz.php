@@ -16,7 +16,12 @@ if(!isset($_SESSION["username"])) {
 
 <link rel="stylesheet" href="css/select_quiz.css">
 <link rel="stylesheet" href="css/register.css">
-<link rel="stylesheet" href="css/user_quiz.css">  
+<link rel="stylesheet" href="css/user_quiz.css">
+
+<section class="hero">
+    <img src="../images/icons8-bear-96.png" alt="Profile Picture">
+    <h1>CybearLearn E-Learning</h1>
+</section>
 
 <section class="featured-courses">
             <h2>Featured Topics</h2>
@@ -38,11 +43,13 @@ if(!isset($_SESSION["username"])) {
                  
                 <!--<input type="button"  value="<?php echo $row["topic"]; ?>" onclick="set_quiz_type_session(this.value);">-->
                 </div>
+                
 
             <?php
             }
 
             ?>
+           
         </section>
 
 <?php

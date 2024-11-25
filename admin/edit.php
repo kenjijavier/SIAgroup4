@@ -24,8 +24,8 @@ include "header.php";
                     <input type="text" name="topic1" value="<?php echo $topic ?>">
 
                     <label for="exam-time">Quiz time in Minutes:</label>
-                    <input type="text" name="min1" value="<?php echo $min ?>">
-
+                    <input type="number" name="min1" value="<?php echo $min ?>" min="1" max="99">
+                    
                     <br><button type="submit" name="submit1">Save Changes</button>
 
                     

@@ -23,7 +23,7 @@ while ($row=mysqli_fetch_array($response)) {
             <div class="box" id="quiz_add">
                 <div class="add-exam">
                     <h2>Add question</h2>
-                    <form action="" name="form1" method="post">
+                    <form action="" name="form1" method="post" enctype="multipart/form-data">
                     <label for="exam-category">Question:</label>
                     <input type="text" name="question" placeholder="Add a question" required>
                     <hr>

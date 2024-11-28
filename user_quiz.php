@@ -15,13 +15,10 @@ include "header.php";
         <div class="course-card" id="questions">
             <div>
                 <div class="questions_counter">
-                    <span id="current_que">0</span>
-                    <span>/</span>
-                    <span id="total_que">0</span>
-                </div> 
-                <div class="timer">
-                    Time left: <span id="countdowntimer" style="display: block;"></span>
+                    <span id="current_que">0</span> / <span id="total_que">0</span>
+                    <span style="float: right;">Time left: <span id="countdowntimer"></span></span>
                 </div>
+                
             </div>
             <div id="load_questions">
             </div>

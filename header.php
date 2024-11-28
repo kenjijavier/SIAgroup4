@@ -22,7 +22,7 @@ include "connection.php";
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Lessons</a></li>
+                <li><a href="select_lesson.php">Lessons</a></li>
                 <li><a href="select_quiz.php">Quizzes</a></li>
                 <?php
                     if (!isset($_SESSION['username'])) {
@@ -33,7 +33,13 @@ include "connection.php";
                     else {
                         ?>
 
-                        <li><a href="#"><i class="fas fa-tachometer-alt"><img src="images/icons8-profile-picture-30.png" alt="Dashboard"></i><?php echo $user; ?></a></li>
+                        <li>
+                        <a href="#">
+                            <img src="images/icons8-profile-picture-30.png" alt="Dashboard" style="vertical-align: middle;">
+                            <span style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;<?php echo $user; ?></span>
+                        </a>
+                        </li>
+
                         <li><a href="logout.php">Logout</a></li>
                         
                         <?php

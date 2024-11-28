@@ -1,4 +1,4 @@
-
+<!-- not yet screenshotted-->
 
 <?php
 session_start();
@@ -46,7 +46,7 @@ include "header.php";
                                     <td><?php echo $number; ?></td>
                                     <td><?php echo $row["topic"]; ?></td>
                                     <td><?php echo $row["time_minutes"]; ?></td>
-                                    <td><a href="add_edit_quiz.php?id=<?php echo $row["id"]; ?>" class="edit-link">SELECT</a></td>
+                                    <td><a href="add_edit_content.php?id=<?php echo $row["id"]; ?>" class="edit-link">SELECT</a></td>
                                 </tr>
 
                                 <?php

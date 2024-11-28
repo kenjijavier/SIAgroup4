@@ -24,7 +24,7 @@ include "header.php";
 
                 <div class="course-card">
                 <h3><?php echo $row["topic"]; ?></h3>
-                <p>Duration: <?php echo $row["time_minutes"]; ?> minutes</p>
+                <p></p>
                 <button>Read</button>
                 
                 </div>

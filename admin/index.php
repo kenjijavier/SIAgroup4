@@ -18,7 +18,7 @@ include "../connection.php";
 <body>   
 
   <div class="login-container">
-    <h2>CyberLearn | Admin Login</h2>
+    <h2>CyberLearn | Instructor Login</h2>
     <form action="" method="post">
       <label>Username:</label>
       <input type="text" name="username" required>

@@ -2,15 +2,6 @@
 session_start();
 include "header.php";
 include "connection.php";
-if(!isset($_SESSION["username"])) {
-    ?>
-    <script type="text/javascript">
-        window.location = "login.php";
-    </script>
-    <?php
-}
-
-
 
 ?>
 <link rel="stylesheet" href="css/select_quiz.css">
@@ -19,7 +10,7 @@ if(!isset($_SESSION["username"])) {
 
 <section class="hero">
     <img src="../images/icons8-bear-96.png" alt="Profile Picture">
-    <h1>CybearLearn | Quizzes</h1>
+    <h1>CybearLearn | Lessons</h1>
 </section>
 
 <section class="featured-courses">
@@ -35,10 +26,11 @@ if(!isset($_SESSION["username"])) {
 
                 <div class="course-card">
                 <h3><?php echo $row["topic"]; ?></h3>
-                <p>Duration: <?php echo $row["time_minutes"]; ?> minutes</p>
+                <p></p>
                 
-                
-                <button value="<?php echo $row["topic"]; ?>" onclick="set_quiz_type_session(this.value);">Take quiz</button>
+                <a href="lesson.php?topic=<?php echo $row["topic"]; ?>">
+                    <button>Read</button>
+                </a>
                  
                 <!--<input type="button"  value="<?php echo $row["topic"]; ?>" onclick="set_quiz_type_session(this.value);">-->
                 </div>
@@ -57,4 +49,3 @@ include "footer.php";
 
 ?>
 
-<script text="text/javascript" src="js/select_quiz.js"></script>

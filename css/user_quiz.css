@@ -90,3 +90,7 @@ button {
 .choices label:not(:hover) {
     transition: all 0.3s ease-out; /* Slower ease-out for a smoother return */
 }
+
+#countdowntimer {
+    display: inline-block;
+  }

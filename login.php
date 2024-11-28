@@ -21,11 +21,33 @@ include "connection.php";
 
 <header>
         <nav>
-            <ul>
+        <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Lessons</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="select_lesson.php">Lessons</a></li>
+                <li><a href="select_quiz.php">Quizzes</a></li>
+                <?php
+                    if (!isset($_SESSION['username'])) {
+                        ?> 
+                            <li><a href="login.php">Login</a></li>
+                        <?php
+                    }
+                    else {
+                        ?>
+
+                        <li>
+                        <a href="#">
+                            <img src="images/icons8-profile-picture-30.png" alt="Dashboard" style="vertical-align: middle;">
+                            <span style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;<?php echo $user; ?></span>
+                        </a>
+                        </li>
+
+                        <li><a href="logout.php">Logout</a></li>
+                        
+                        <?php
+                    }
+                ?>
+                
+                
             </ul>
         </nav>
     </header>

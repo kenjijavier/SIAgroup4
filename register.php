@@ -10,8 +10,8 @@ include "connection.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
-    <title>CyberLearn - Register</title>
-
+    <title>CyberLearn | Register</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/register.css">
@@ -35,10 +35,10 @@ include "connection.php";
             <form action="" name="form1" method="post">
                 
                 <label>First Name:</label>
-                <input type="text"  name="first_name" required>
+                <input type="text"  name="first_name" pattern="[A-Za-z]+" title="Only letters allowed" required>
 
                 <label>Last Name:</label>
-                <input type="text"name="last_name" required>
+                <input type="text"name="last_name" pattern="[A-Za-z]+" title="Only letters allowed"  required>
 
                 <label>Username:</label>
                 <input type="text" name="username" required>

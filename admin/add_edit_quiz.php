@@ -362,7 +362,7 @@ catch (mysqli_sql_exception $e) {
 
       if (confirm('Are you sure you want to delete this question?')) {
         const id = link.dataset.id;
-        const topic = link.dataset.topic; // Assuming you have a data attribute for topic
+        const topic = link.dataset.topic; 
         window.location.href = `delete_question.php?id=${id}&topic=${topic}`;
         }
     });

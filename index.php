@@ -2,13 +2,26 @@
 session_start();
 include "header.php";
 
+
+$sql1 = "SELECT * FROM quiz_topic";
+$result = mysqli_query($link, $sql1);
+
+$topics = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+shuffle($topics);
+$random_row = $topics[0];
+
+$random_topic = $random_row['topic'];
+
 ?>
 
         <section class="hero">
         <img src="../images/icons8-bear-96.png" alt="Profile Picture">
             <h1>CybearLearn E-Learning</h1>
             <p>Hello <?php echo $user; ?>!</p>
-            <button>Start Learning</button>
+            <a href="lesson.php?topic=<?php echo $random_topic; ?>">
+                <button>Start Learning</button>
+            </a>
         </section>
 
         <section class="featured-courses">
@@ -18,6 +31,8 @@ include "header.php";
                 $sql = "SELECT * FROM quiz_topic";
                 $response = mysqli_query($link, $sql);
 
+                
+                
                 while($row = mysqli_fetch_array($response)) {
 
             ?>
@@ -25,7 +40,9 @@ include "header.php";
                 <div class="course-card">
                 <h3><?php echo $row["topic"]; ?></h3>
                 <p></p>
-                <button>Read</button>
+                <a href="lesson.php?topic=<?php echo $row["topic"]; ?>">
+                    <button>Read</button>
+                </a>
                 
                 </div>
 

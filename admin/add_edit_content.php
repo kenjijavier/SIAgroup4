@@ -33,14 +33,11 @@ while ($row=mysqli_fetch_array($response)) {
                     <br><br>
                     <label >Content:</label>
                     
-                    <textarea name="content" maxlength="10000" placeholder="character limit: 10,000" required style="height: 200px; width: 1000px;"></textarea>
+                    <textarea name="content" maxlength="10000" placeholder="character limit: 10,000" required style="height: 320px; width: 1660px;"></textarea>
                     <br><br>
                     <label>Add photo (optional):</label>
                     <input type="file" name="media" accept="image/*">
-
                     <br><br><button type="submit" name="submit1">Add content</button>
-
-                    
                     </form>
                 </div> 
                 
@@ -73,7 +70,7 @@ while ($row=mysqli_fetch_array($response)) {
 
                                     <tr>
                                         <td><?php echo $number ?></td>
-                                        <td><?php echo $row["subtopic"] . " " . $number; ?></td>
+                                        <td><?php echo $row["subtopic"]; ?></td>
                                         <td><?php echo $row["description"]; ?></td>
                                         <td><?php echo $row["content"]; ?></td>
                                         <td>
@@ -156,88 +153,6 @@ catch (mysqli_sql_exception $e) {
 
 }
 ?>
-
-
-
-<?php
-
-//second form
-
-if (isset($_POST["submit2"])) {
-
-$cycle = 0;
-$count = 0;
-
-try {
-    $sql = "SELECT * FROM quiz WHERE topic='$quiz_topic' order by id asc";
-    $response = mysqli_query($link,$sql);
-
-    $count=mysqli_num_rows($response);
-    if ($count!==0){
-        while($row=mysqli_fetch_array($response)) {
-            $cycle=$cycle+1;
-
-            $sql1 = "UPDATE quiz SET question_no='$cycle' WHERE id=$row[id]";
-            mysqli_query($link,$sql1);
-        }
-    }
-    
-}
-catch (mysqli_sql_exception $e) {
-    echo "Error has occured: " . $e->getMessage();
-}
-
-try {
-    $cycle=$cycle+1;
-    $tm = md5(time());
-
-    $iquestion = filter_input(INPUT_POST, "iquestion", FILTER_SANITIZE_SPECIAL_CHARS);
-
-    $imgname1 = $_FILES["ic1"]["name"];
-    $dest1 = "./choice_images/".$tm.$imgname1;
-    $dest_db1= "choice_images/".$tm.$imgname1;
-    move_uploaded_file($_FILES["ic1"]["tmp_name"],$dest1);
-
-    $imgname2 = $_FILES["ic2"]["name"];
-    $dest2 = "./choice_images/".$tm.$imgname2;
-    $dest_db2= "choice_images/".$tm.$imgname2;
-    move_uploaded_file($_FILES["ic2"]["tmp_name"],$dest2);
-
-    $imgname3 = $_FILES["ic3"]["name"];
-    $dest3 = "./choice_images/".$tm.$imgname3;
-    $dest_db3= "choice_images/".$tm.$imgname3;
-    move_uploaded_file($_FILES["ic3"]["tmp_name"],$dest3);
-
-    $imgname4 = $_FILES["ic4"]["name"];
-    $dest4 = "./choice_images/".$tm.$imgname4;
-    $dest_db4= "choice_images/".$tm.$imgname4;
-    move_uploaded_file($_FILES["ic4"]["tmp_name"],$dest4);
-
-    $imgname5 = $_FILES["ians"]["name"];
-    $dest5 = "./choice_images/".$tm.$imgname5;
-    $dest_db5= "choice_images/".$tm.$imgname5;
-    move_uploaded_file($_FILES["ians"]["tmp_name"],$dest5);
-
-
-
-    $sql2 = "INSERT INTO quiz VALUES(NULL, '$cycle', '$iquestion', '$dest_db1', '$dest_db2', '$dest_db3', '$dest_db4', '$dest_db5', '$quiz_topic')";
-    mysqli_query($link,$sql2);
-
-    ?>
-    <script>
-        alert("Question has been added!");
-        window.location.href=window.location.href;
-    </script>
-    <?php
-    
-}
-catch (mysqli_sql_exception $e) {
-    echo "Error has occured: " . $e->getMessage();
-}
-
-}
-?>
-
 <script>
   const deleteLinks = document.querySelectorAll('.delete-question-link');
 
@@ -245,7 +160,7 @@ catch (mysqli_sql_exception $e) {
     link.addEventListener('click', (event) => {
       event.preventDefault();
 
-      if (confirm('Are you sure you want to delete this question?')) {
+      if (confirm('Are you sure you want to delete this content?')) {
         const id = link.dataset.id;
         const topic = link.dataset.topic; 
         window.location.href = `delete_question.php?id=${id}&topic=${topic}`;

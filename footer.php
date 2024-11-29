@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/register.css"> 
 
 <footer> 
-<p>&copy; 2024 CyberLearn, an E-Learning App | ACS IT Solution</p>
+<p>&copy; 2024 CybearLearn, an E-Learning App | ACS IT Solution</p>
 
 </footer>
 </body>

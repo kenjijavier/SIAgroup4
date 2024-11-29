@@ -54,7 +54,7 @@ include "connection.php";
 
   <main>
     <section class="hero animate__animated animate__fadeInUp">
-      <h1>Login</h1>
+      <h1><strong>Login</strong>&nbsp;&nbsp;<img src="../images/icons8-bear-96.png" alt="Profile Picture"></h1>
       <form action="" name="form1" method="post">
         <div class="mb-3">
           <label class="form-label">Username:</label>
@@ -85,7 +85,7 @@ include "connection.php";
 
   <footer>   
 
-  <p>&copy; 2024 CyberLearn, an E-Learning App | ACS IT Solution</p>
+  <p>&copy; 2024 CybearLearn, an E-Learning App | ACS IT Solution</p>
 </footer>
 
 </body>

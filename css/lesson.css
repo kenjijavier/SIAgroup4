@@ -51,6 +51,7 @@ body {
 }
 
 .description p {
+    padding: 25px;
     font-size: 1.2em;
     font-style: italic;
     color: #31318A; 
@@ -59,7 +60,7 @@ body {
 }
 
 .content p {
-    padding: 10px;
+    padding: 25px;
     font-size: 1em;
     line-height: 1.8;
     color: #000000;

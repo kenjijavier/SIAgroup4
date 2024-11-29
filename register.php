@@ -53,7 +53,7 @@ include "connection.php";
 
     <main>
         <section class="hero">
-            <h1>Register</h1>
+            <h1><strong>Register</strong>&nbsp;&nbsp;<img src="../images/icons8-bear-96.png" alt="Profile Picture"></h1>
             <form action="" name="form1" method="post">
                 
                 <label>First Name:</label>
@@ -109,7 +109,7 @@ include "connection.php";
 
     <footer>   
 
-    <p>&copy; 2024 CyberLearn, an E-Learning App | ACS IT Solution</p>
+    <p>&copy; 2024 CybearLearn, an E-Learning App | ACS IT Solution</p>
     </footer>
 </body>
 </html>

@@ -4,7 +4,7 @@ include "header.php";
 include "connection.php";
 
 ?>
-<link rel="stylesheet" href="css/select_quiz.css">
+<link rel="stylesheet" href="css/select_lesson.css">
 <link rel="stylesheet" href="css/register.css">
 <link rel="stylesheet" href="css/user_quiz.css">
 

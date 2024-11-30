@@ -35,4 +35,7 @@ include "header.php";
 <?php
 include "footer.php";
 ?>
+
 <script type="text/javascript" src="js/user_quiz.js"></script>
+
+

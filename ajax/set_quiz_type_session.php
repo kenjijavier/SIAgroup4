@@ -21,4 +21,3 @@ $endTime = $currentTime + ($_SESSION["quiz_time"] * 60);
 $_SESSION["end_time"] = date("Y-m-d H:i:s", $endTime);
 $_SESSION["quiz_start"] = "yes";
 ?>
-

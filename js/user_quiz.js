@@ -13,11 +13,8 @@ function timer() {
         }
     };
     xmlhttp.open("GET", "ajax/load_timer.php", true);
-    xmlhttp.send(null);
-
-    
+    xmlhttp.send(null); 
 }
-
 function load_total_que() {
     var xmlhttp = new XMLHttpRequest;
     xmlhttp.onreadystatechange=function () {
@@ -29,7 +26,6 @@ function load_total_que() {
     xmlhttp.open("GET", "ajax/load_total_que.php", true);
     xmlhttp.send(null);
 }
-
 var question_no = "1";
 load_questions(question_no);
 

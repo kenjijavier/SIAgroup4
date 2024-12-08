@@ -19,6 +19,7 @@ include "../connection.php";
 
   <div class="login-container">
     <h2>CybearLearn | Instructor Login</h2>
+    
     <form action="" method="post">
       <label>Username:</label>
       <input type="text" name="username" required>
@@ -34,6 +35,8 @@ include "../connection.php";
   </div>
 
 </body>
+
+
 </html>
 
 <?php

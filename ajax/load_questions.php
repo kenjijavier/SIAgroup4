@@ -57,7 +57,7 @@ else {
                         <?php
                             if(strpos($choice1, 'images/')!=false) {
                                 ?>
-                                    <img src=admin/<?php echo $choice1; ?> height="100" width="100">
+                                    <img src="admin/<?php echo $choice1; ?>" height="100" width="100">
                                 <?php
                             }
                             else {
@@ -77,7 +77,7 @@ else {
                         <?php
                             if(strpos($choice2, 'images/')!=false) {
                                 ?>
-                                    <img src=admin/<?php echo $choice2; ?> height="100" width="100">
+                                    <img src="admin/<?php echo $choice2; ?>" height="100" width="100">
                                 <?php
                             }
                             else {
@@ -97,7 +97,7 @@ else {
                         <?php
                             if(strpos($choice3, 'images/')!=false) {
                                 ?>
-                                    <img src=admin/<?php echo $choice3; ?> height="100" width="100">
+                                    <img src="admin/<?php echo $choice3; ?>" height="100" width="100">
                                 <?php
                             }
                             else {
@@ -117,7 +117,7 @@ else {
                         <?php
                             if(strpos($choice4, 'images/')!=false) {
                                 ?>
-                                    <img src=admin/<?php echo $choice4; ?> height="100" width="100">
+                                    <img src="admin/<?php echo $choice4; ?>" height="100" width="100">
                                 <?php
                             }
                             else {

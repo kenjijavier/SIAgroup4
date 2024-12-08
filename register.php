@@ -107,10 +107,9 @@ include "connection.php";
         </section>
     </main>
 
-    <footer>   
-
-    <p>&copy; 2024 CybearLearn, an E-Learning App | ACS IT Solution</p>
-    </footer>
+<?php
+include "footer.php";
+?>
 </body>
 </html>
 

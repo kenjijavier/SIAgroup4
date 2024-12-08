@@ -27,6 +27,7 @@ if(!isset($_SESSION["admin_username"])) {
                 <img src="../images/icons8-bear-96.png" alt="Profile Picture">
                 <h2>CybearLearn</h2>
                 <h4>Instructor Panel</h4>
+                
                 <hr>
             </div>
             <ul>
@@ -36,4 +37,7 @@ if(!isset($_SESSION["admin_username"])) {
                 <li><a href="quiz.php"><i class="fas fa-cog"><img src="../images/icons8-quiz-30.png" alt="Settings"></i>Quiz</a></li>
                 <li><a href="logout.php"><i class="fas fa-sign-out-alt"><img src="../images/icons8-logout-30.png" alt="Logout"></i> Logout</a></li>
             </ul>
-        </div> 
+
+            
+        </div>
+

@@ -48,6 +48,7 @@ include "header.php"
 
             $count = mysqli_num_rows($res);
             $wrong = $count - $right;
+            
             try {
                 $percentage = ($right / $count) * 100;
                 ?><h3><?php echo "Score: ". $right . "/" . $count . "<br>";
@@ -78,7 +79,7 @@ include "header.php"
             ?></h3><?php
             }
             catch (DivisionByZeroError $e) {
-                echo "Error: Division by zero encountered.";
+                echo "<strong>Quiz not yet available for this topic.</strong>";
             }
 
             
